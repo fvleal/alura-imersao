@@ -4,11 +4,6 @@ import { useState } from 'react';
 import P from 'prop-types';
 import appConfig from '../config.json';
 
-Titulo.propTypes = {
-  children: P.node,
-  tag: P.string,
-};
-
 const Titulo = ({ children, tag = 'h1' }) => {
   const Tag = tag;
   return (
@@ -158,3 +153,8 @@ export default function Teste() {
     </>
   );
 }
+
+Titulo.propTypes = {
+  children: P.node,
+  tag: P.string,
+};

@@ -158,10 +158,6 @@ export default function ChatPage() {
   );
 }
 
-MessageList.propTypes = {
-  mensagens: P.array,
-};
-
 const MessageList = ({ mensagens }) => {
   return (
     <Box
@@ -231,4 +227,8 @@ const MessageList = ({ mensagens }) => {
       })}
     </Box>
   );
+};
+
+MessageList.propTypes = {
+  mensagens: P.array,
 };
