@@ -1,6 +1,7 @@
 import { Box, Text, TextField, Image, Button } from '@skynexui/components';
 import React from 'react';
 import appConfig from '../config.json';
+import P from 'prop-types';
 
 export default function ChatPage() {
   const [mensagem, setMensagem] = React.useState('');
@@ -135,6 +136,10 @@ function Header() {
     </>
   );
 }
+
+MessageList.propTypes = {
+  mensagens: P.array,
+};
 
 function MessageList(props) {
   console.log(props);
