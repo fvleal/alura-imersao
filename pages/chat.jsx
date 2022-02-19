@@ -1,10 +1,10 @@
-/* eslint-disable react/prop-types */
 import { Box, Text, TextField, Image, Button } from '@skynexui/components';
 import { useEffect, useState } from 'react';
 import appConfig from '../config.json';
 import { createClient } from '@supabase/supabase-js';
 import { useRouter } from 'next/router';
 import { ButtonSendSticker } from '../src/components/ButtonSendSticker';
+import P from 'prop-types';
 
 const SUPABASE_ANON_KEY =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzMzNjQ4MCwiZXhwIjoxOTU4OTEyNDgwfQ.kzEKBCTOB_MIc-mgL8Tkf6xWxV_1GRbGFzktLoQspnM';
@@ -157,6 +157,10 @@ export default function ChatPage() {
     </>
   );
 }
+
+MessageList.propTypes = {
+  mensagens: P.array,
+};
 
 const MessageList = ({ mensagens }) => {
   return (

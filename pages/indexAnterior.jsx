@@ -1,8 +1,13 @@
-/* eslint-disable react/prop-types */
 import { Box, Button, Text, TextField, Image } from '@skynexui/components';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import appConfig from '../config.json';
+import P from 'prop-types';
+
+Titulo.propTypes = {
+  children: P.node,
+  tag: P.string,
+};
 
 function Titulo(props) {
   const Tag = props.tag || 'h1';
